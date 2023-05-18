@@ -1,0 +1,147 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "resourceType": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "meta": {
+            "type": "object",
+            "properties": {
+                "versionId": {
+                    "type": "string"
+                },
+                "lastUpdated": {
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string"
+                },
+                "profile": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "lastUpdated",
+                "profile",
+                "source",
+                "versionId"
+            ]
+        },
+        "identifier": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "system": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "system",
+                    "value"
+                ]
+            }
+        },
+        "category": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "coding": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "system": {
+                                    "type": "string"
+                                },
+                                "code": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "code",
+                                "system"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "coding"
+                ]
+            }
+        },
+        "code": {
+            "type": "object",
+            "properties": {
+                "coding": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "system": {
+                                "type": "string"
+                            },
+                            "code": {
+                                "type": "string"
+                            },
+                            "display": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "code",
+                            "display",
+                            "system"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "coding"
+            ]
+        },
+        "subject": {
+            "type": "object",
+            "properties": {
+                "reference": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "reference"
+            ]
+        },
+        "encounter": {
+            "type": "object",
+            "properties": {
+                "reference": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "reference"
+            ]
+        }
+    },
+    "required": [
+        "category",
+        "code",
+        "encounter",
+        "id",
+        "identifier",
+        "meta",
+        "resourceType",
+        "subject"
+    ]
+}

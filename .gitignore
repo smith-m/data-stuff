@@ -7,6 +7,8 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+notebooks/mimic-fhir
+db/
 .Python
 build/
 develop-eggs/

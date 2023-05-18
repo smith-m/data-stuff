@@ -1,0 +1,238 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "resourceType": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "meta": {
+            "type": "object",
+            "properties": {
+                "versionId": {
+                    "type": "string"
+                },
+                "lastUpdated": {
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string"
+                },
+                "profile": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "lastUpdated",
+                "profile",
+                "source",
+                "versionId"
+            ]
+        },
+        "text": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string"
+                },
+                "div": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "div",
+                "status"
+            ]
+        },
+        "extension": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "url": {
+                        "type": "string"
+                    },
+                    "extension": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "url": {
+                                    "type": "string"
+                                },
+                                "valueCoding": {
+                                    "type": "object",
+                                    "properties": {
+                                        "system": {
+                                            "type": "string"
+                                        },
+                                        "code": {
+                                            "type": "string"
+                                        },
+                                        "display": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "code",
+                                        "display",
+                                        "system"
+                                    ]
+                                },
+                                "valueString": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "url"
+                            ]
+                        }
+                    },
+                    "valueCode": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "url"
+                ]
+            }
+        },
+        "identifier": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "system": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "system",
+                    "value"
+                ]
+            }
+        },
+        "name": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "use": {
+                        "type": "string"
+                    },
+                    "family": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "family",
+                    "use"
+                ]
+            }
+        },
+        "gender": {
+            "type": "string"
+        },
+        "birthDate": {
+            "type": "string"
+        },
+        "deceasedDateTime": {
+            "type": "string"
+        },
+        "maritalStatus": {
+            "type": "object",
+            "properties": {
+                "coding": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "system": {
+                                "type": "string"
+                            },
+                            "code": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "code",
+                            "system"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "coding"
+            ]
+        },
+        "communication": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "language": {
+                        "type": "object",
+                        "properties": {
+                            "coding": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "system": {
+                                            "type": "string"
+                                        },
+                                        "code": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "code",
+                                        "system"
+                                    ]
+                                }
+                            }
+                        },
+                        "required": [
+                            "coding"
+                        ]
+                    }
+                },
+                "required": [
+                    "language"
+                ]
+            }
+        },
+        "managingOrganization": {
+            "type": "object",
+            "properties": {
+                "reference": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "reference"
+            ]
+        }
+    },
+    "required": [
+        "birthDate",
+        "extension",
+        "gender",
+        "id",
+        "identifier",
+        "managingOrganization",
+        "maritalStatus",
+        "meta",
+        "name",
+        "resourceType",
+        "text"
+    ]
+}
